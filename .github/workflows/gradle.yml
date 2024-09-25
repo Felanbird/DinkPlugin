@@ -2,7 +2,7 @@ name: Build with Gradle
 on:
   push:
     branches:
-      - master
+      - chore/tests
   pull_request:
   workflow_dispatch:
 
@@ -43,7 +43,7 @@ jobs:
   create-release:
     needs: gradle
     runs-on: ubuntu-latest
-    if: (github.event_name == 'push' && github.ref == 'refs/heads/master')
+    if: (github.event_name == 'push' && github.ref == 'refs/heads/chore/tests')
 
     steps:
       - uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
@@ -67,4 +67,4 @@ jobs:
             ${{ github.event.head_commit.message }}
           prerelease: true
           name: Nightly Release
-          tag: nightly-build
+          tag: nightly-build-test
