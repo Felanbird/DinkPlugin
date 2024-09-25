@@ -46,7 +46,7 @@ public class ClueNotifier extends BaseNotifier {
 
     @Override
     public boolean isEnabled() {
-        return config.notifyClue() && super.isEnabled();
+        return config.notifyClue();
     }
 
     @Override

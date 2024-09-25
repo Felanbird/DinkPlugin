@@ -59,7 +59,7 @@ public class LootNotifier extends BaseNotifier {
 
     @Override
     public boolean isEnabled() {
-        return config.notifyLoot() && super.isEnabled();
+        return config.notifyLoot();
     }
 
     @Override
