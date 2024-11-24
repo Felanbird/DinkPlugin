@@ -2,7 +2,7 @@ name: Build with Gradle
 on:
   push:
     branches:
-      - master
+      - config/test
   pull_request:
   workflow_dispatch:
 
